@@ -1,1 +1,9 @@
-/*  hi, i am mimi in the whole wide world in the world*/
+div{
+    text-align: center;
+    margin-top: 50px;
+}
+img{
+    width: 50%;
+    height: 70%;
+    cursor: pointer;
+}
