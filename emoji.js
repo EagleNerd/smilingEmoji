@@ -4,6 +4,7 @@ function emojiGreets(){
 	let name = prompt("What is your name? Type your name here..." );
 	if(name){
 		alert("Nice to meet you, " +  name + ".");
-		document.getElementById("emoji").src = "images/smiley-emoji.jpg";
+		document.getElementById('emoji').src = 'images/smiley-emoji.jpg';
+		setInterval("document.getElementById('emoji').src = 'images/waving-emoji.jpg';", 6000);
 	}
 }
