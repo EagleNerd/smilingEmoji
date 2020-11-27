@@ -1,6 +1,12 @@
 var userName;
 function emojiGreets(){
-alert("Hello there! I am your pet emoji");
+	if (navigator.cookieEnabled)
+	userName = readCookie("Emotional_emoji");
+	if (userName)
+		alert("Hello " + userName + ", I missed you.");
+	  else
+		alert("Hello there! I am your pet emoji");
+	
 }
 function touchEmoji(){
 	if (userName){
@@ -12,6 +18,11 @@ function touchEmoji(){
 
 	if (userName){
 		alert("It's my pleasure to meet you, " + userName + ".");
+
+		if (navigator.cookieEnabled)
+		writeCookie("Emotional_emoji", userName, 2 * 365);
+	  else
+	  alert("Sorry, cookies aren't supported/enabled on your browser. I won't remember you later.")
 	}
 		document.getElementById('emoji').src = 'images/smiley-emoji.jpg';
 		setTimeout("document.getElementById('emoji').src = 'images/waving-emoji.jpg';", 6000);
